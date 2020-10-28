@@ -1,1 +1,105 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.margin-left-20px {
+    margin-left: 20px;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.bg-light-gray {
+    background-color: lightgray
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.padding-5 {
+    padding: 5px;
+}
+
+.margin-b {
+    padding-bottom: 15px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.mat-spinner {
+    position: absolute !important;
+    left: 50%;
+    top: 50%;
+}
+
+.content-section {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    .card-container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 10px;
+      }
+  } 
+  
+  
+  @media (min-width: 700px) {
+    .content-section {
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-gap: 10px;
+        .card-container {
+            display: grid;
+            grid-template-columns: auto;
+            grid-gap: 10px;
+          }
+      }
+}
+
+@media (min-width: 1025px) {
+    .content-section {
+        display: grid;
+        grid-template-columns: 250px auto;
+        grid-gap: 10px;
+        .card-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+          }
+      }
+}
+
+@media (min-width: 1440px) {
+    .content-section {
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+          }
+      }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

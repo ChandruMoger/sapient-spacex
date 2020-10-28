@@ -1,0 +1,16 @@
+<section class="home-page" role="main">
+    <h1 style="padding-left: 24px;">SpaceX Launch Programs</h1>
+    <div class="content-section padding-10">
+        <div class="card-grid-col">
+            <app-filter (action)="manageActions($event)" [launchYears]="launchYears"></app-filter>
+        </div>
+        <div class="card-container pos-relative">
+            <mat-spinner *ngIf="loading"></mat-spinner>
+            <div *ngFor="let product of productLists" class="card-grid-col">
+                <app-product *ngIf="!loading && productLists.length > 0" [product]="product"></app-product>
+            </div>
+            <h2 *ngIf="!loading && productLists.length == 0">No Items to display!!!</h2>
+        </div>
+    </div>
+    <p class="text-center"><strong>Developed By:</strong> Chandrashekhar M</p>
+</section>

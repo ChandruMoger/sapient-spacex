@@ -1,0 +1,40 @@
+<div class="filter bg-white padding-5">
+    <h2>Filters</h2>
+    <div class="launch-year-fltr text-align-center">
+        <strong>Launch Year</strong>
+    </div>
+    <div class="filter__years">
+        <div *ngFor="let year of launchYears" class="width-50">
+            <button 
+                class="filter__years_button"
+                [ngClass]="{'filter-applied': yearSelected === year}"
+                (click)="getProductsByFilter(year, 'year')">{{year}}</button>
+        </div>
+    </div>
+    <ng-container></ng-container>
+    <div class="launch-year-fltr text-align-center">
+        <strong>Successfull Launch</strong>
+    </div>
+    <div class="filter__years">
+        <button 
+        class="filter__years_button" 
+        [ngClass]="{'filter-applied': launchSelected === 'true'}" 
+        (click)="getProductsByFilter('true', 'launch')">True</button>
+        <button 
+        class="filter__years_button" 
+        [ngClass]="{'filter-applied': launchSelected === 'false'}" 
+        (click)="getProductsByFilter('false', 'launch')">False</button>
+    </div>
+
+    <div class="launch-year-fltr text-align-center">
+        <strong>Successfull Landing</strong>
+    </div>
+    <div class="filter__years">
+        <button class="filter__years_button" 
+        [ngClass]="{'filter-applied': landSelected === 'true'}" 
+        (click)="getProductsByFilter('true', 'land')">True</button>
+        <button class="filter__years_button" 
+        [ngClass]="{'filter-applied': landSelected === 'false'}" 
+        (click)="getProductsByFilter('false', 'land')">False</button>
+    </div>
+</div>
